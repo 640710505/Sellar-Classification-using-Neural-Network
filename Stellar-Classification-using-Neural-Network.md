@@ -1,16 +1,16 @@
 
 # Data Visualization
-# 
-#
+
+
 ![Unknown](https://github.com/640710505/Sellar-Classification-using-Neural-Network/assets/114089025/e5c9f836-24ab-4d1e-b257-d0c5f782256a)
 #
 ![Unknown](https://github.com/640710505/Sellar-Classification-using-Neural-Network/assets/114089025/dfadc634-c486-4f6f-9fa8-3cad6e3d14b0)
 #
 ![Unknown](https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/114089025/9c0a3c05-6f9e-453e-a80d-01a776fe7405)
 #
-# 
-#
-#
+
+
+
 
 # Feature important 
 ### With Logistic Regression
@@ -81,20 +81,33 @@ print(coefficients)
 
 ## Coefficient Graph
 ![featureimportant](https://github.com/640710505/Sellar-Classification-using-Neural-Network/assets/141728733/10905af0-4587-4fcf-bc27-d759f84fc7d1)
-# 
-#
-#
+
+
+
 # Feature Extraction
-#
-#
-# 
+We should only important feature!!
+```python
+balanced_df_important_feature_only = balanced_df[['u', 'g', 'r', 'i', 'z', 'redshift','class']]
+```
+After that we export dataset that only have feature important to CSV
+```python
+df = pd.DataFrame(balanced_df_important_feature_only)
+
+# Specify the path where you want to save the CSV file
+csv_file_path = 'balanced_df_important_feature_only.csv'
+
+# Export the DataFrame to a CSV file
+df.to_csv(csv_file_path, index=False)
+``` 
 
 
 
-#
-#
-# 
-#
+
+
+
+
+
+
 # Neural Network Model
 # 
 #
