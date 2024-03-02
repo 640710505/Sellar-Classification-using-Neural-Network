@@ -2,6 +2,11 @@
 # Data Visualization
 # 
 #
+![Unknown](https://github.com/640710505/Sellar-Classification-using-Neural-Network/assets/114089025/e5c9f836-24ab-4d1e-b257-d0c5f782256a)
+#
+![Unknown](https://github.com/640710505/Sellar-Classification-using-Neural-Network/assets/114089025/dfadc634-c486-4f6f-9fa8-3cad6e3d14b0)
+#
+![Unknown](https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/114089025/9c0a3c05-6f9e-453e-a80d-01a776fe7405)
 #
 # 
 #
