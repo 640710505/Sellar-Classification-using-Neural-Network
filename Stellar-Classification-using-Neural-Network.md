@@ -161,6 +161,16 @@ y_train_one_hot = to_categorical(y_train, num_classes=3)
 y_test_one_hot = to_categorical(y_test, num_classes=3)
 print(y_train_one_hot.shape)
 ```
+<details>
+<summary><strong>Output</strong></summary>
+
+```
+(47612, 3)
+```
+</details>
+
+
+
 ```python
 from keras import Sequential
 from keras.layers import Dense
