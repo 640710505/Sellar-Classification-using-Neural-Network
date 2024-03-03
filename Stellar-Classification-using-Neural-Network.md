@@ -203,7 +203,7 @@ def plot_history(history):
 
     plot_history(history)
 ```
-![training and validatio](https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/141728733/33f6d5f0-58d6-490e-a33a-0e65b3f577de)
+<img width="500" alt="history loss" src="https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/141728733/33f6d5f0-58d6-490e-a33a-0e65b3f577de">
 
 ```python
 import numpy as np
@@ -212,6 +212,16 @@ predict
 predicted_classes = np.argmax(predict, axis=1)
 print(predicted_classes)
 ```
+<details>
+<summary><strong>Output</strong></summary>
+
+```
+372/372 [==============================] - 1s 2ms/step
+
+[0 1 1 ... 2 2 0]
+```
+</details>
+
 
 
 
@@ -221,21 +231,16 @@ from sklearn.metrics import accuracy_score
 score = accuracy_score(y_test, predicted_classes)
 score
 ```
-```python
+<details>
+<summary><strong>Output</strong></summary>
 
 ```
-```python
-
+0.9955477150537635
 ```
-```python
+</details>
 
-```
-#
-# 
-#
-#
-# 
-#
+
+
 # Score Analysis
 # 
 
