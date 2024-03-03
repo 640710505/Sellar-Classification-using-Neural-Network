@@ -178,16 +178,48 @@ model.summary()
 
 
 ```python
-
+from tensorflow.keras.losses import SparseCategoricalCrossentropy
+model.compile(optimizer="adam", loss='categorical_crossentropy')
+history = model.fit(X_train, y_train_one_hot, epochs=9, batch_size = 60, validation_data=(X_test, y_test_one_hot))
 ```
-```python
 
+<img width="500" alt="history loss" src="https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/141728733/957af407-48d9-4af8-a3cb-8f039fcb48b2">
+
+```python
+#function plot graph ref:notebookอาจารย์
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+
+def plot_history(history):
+    loss = history.history['loss']
+    val_loss = history.history['val_loss']
+    x = range(1, len(loss) + 1)
+    plt.figure(figsize=(12, 5))
+    plt.subplot(1, 2, 2)
+    plt.plot(x, loss, 'b', label='Training loss')
+    plt.plot(x, val_loss, 'r', label='Validation loss')
+    plt.title('Training and validation loss')
+    plt.legend()
+
+    plot_history(history)
 ```
-```python
+![training and validatio](https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/141728733/33f6d5f0-58d6-490e-a33a-0e65b3f577de)
 
+```python
+import numpy as np
+predict = model.predict(X_test)
+predict
+predicted_classes = np.argmax(predict, axis=1)
+print(predicted_classes)
 ```
-```python
 
+
+
+```python
+from sklearn.metrics import accuracy_score
+
+score = accuracy_score(y_test, predicted_classes)
+score
 ```
 ```python
 
