@@ -174,26 +174,8 @@ model.add(Dense(units= 10 , activation='relu'))
 model.add(Dense(units=3, activation='sigmoid'))
 model.summary()
 ```
+<img width="500" alt="Model sequential" src="https://github.com/640710505/Stellar-Classification-using-Neural-Network/assets/141728733/c967ad6f-ae21-44b0-b58e-c90d596f6e87">
 
-Model: "sequential"
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- dense (Dense)               (None, 2000)              18000     
-                                                                 
- dense_1 (Dense)             (None, 1000)              2001000   
-                                                                 
- dense_2 (Dense)             (None, 100)               100100    
-                                                                 
- dense_3 (Dense)             (None, 10)                1010      
-                                                                 
- dense_4 (Dense)             (None, 3)                 33        
-                                                                 
-=================================================================
-Total params: 2120143 (8.09 MB)
-Trainable params: 2120143 (8.09 MB)
-Non-trainable params: 0 (0.00 Byte)
-_________________________________________________________________
 
 ```python
 
