@@ -1,6 +1,4 @@
 # About Dataset :
-
-
 Context : 
 
               In astronomy, stellar classification is the classification of stars based on their spectral characteristics. 
@@ -144,8 +142,7 @@ df.to_csv(csv_file_path, index=False)
 
 
 # Neural Network Model
-# 
-# 
+
 ```python
 X = dataset[['u', 'g', 'r', 'i', 'z', 'redshift','distance', 'NewAMagnitude']]
 y = dataset[['class']]
