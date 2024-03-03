@@ -145,7 +145,77 @@ df.to_csv(csv_file_path, index=False)
 
 # Neural Network Model
 # 
-#
+# 
+```python
+X = dataset[['u', 'g', 'r', 'i', 'z', 'redshift','distance', 'NewAMagnitude']]
+y = dataset[['class']]
+```
+```python
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.utils import to_categorical
+X_train , X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, 
+                                                     shuffle=True)
+
+# one hot encoding of y
+y_train_one_hot = to_categorical(y_train, num_classes=3)
+y_test_one_hot = to_categorical(y_test, num_classes=3)
+print(y_train_one_hot.shape)
+```
+```python
+from keras import Sequential
+from keras.layers import Dense
+from keras.backend import clear_session
+
+model = Sequential()
+model.add(Dense(units=2000, activation='relu', input_shape=(8,)))
+model.add(Dense(units=1000 , activation='relu'))
+model.add(Dense(units=100 , activation='relu'))
+model.add(Dense(units= 10 , activation='relu'))
+model.add(Dense(units=3, activation='sigmoid'))
+model.summary()
+```
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 2000)              18000     
+                                                                 
+ dense_1 (Dense)             (None, 1000)              2001000   
+                                                                 
+ dense_2 (Dense)             (None, 100)               100100    
+                                                                 
+ dense_3 (Dense)             (None, 10)                1010      
+                                                                 
+ dense_4 (Dense)             (None, 3)                 33        
+                                                                 
+=================================================================
+Total params: 2120143 (8.09 MB)
+Trainable params: 2120143 (8.09 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
 #
 # 
 #
